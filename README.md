@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+A simple 'ToDo' web app created using React and using Redux to manage the application state.
+
 ## Available Scripts
 
 In the project directory, you can run:
