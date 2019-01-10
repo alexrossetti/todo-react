@@ -1,32 +1,123 @@
 .App {
+  width: 95%;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.title {
+  margin: 20px 0px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+input {
+  display: inline-block;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.add-btn  {
+  margin-top: 10px;
+  height: 30px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.clear-btn  {
+  height: 30px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  margin-top: 50px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #ff0000;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.add-btn:hover {
+  background-color: #1c6805;
+}
+
+.add-btn:focus, .clear-btn:focus {
+  outline: 0;
+}
+
+
+.todos-list {
+  list-style-type: none;
+  width: 80%;
+  margin: 40px auto 0px auto;
+}
+
+.todos-list li {
+  padding: 10px 0px;
+  margin-bottom: -1px;
+  border: 1px dotted #ccc;
+  display: flex;
+  flex-direction: row;
+  line-height: 30px;
+}
+
+.todos-list li:hover {
+  background-color: #fafafa;
+}
+
+
+.todos-list-text {
+  text-align: left;
+  margin-left: 20px;
+  flex: 5;
+}
+
+.delete-btn {
+  font-size: 20px;
+  color: red;
+  flex: 1;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+}
+
+
+@media (min-width: 556px) {
+
+  form {
+    width: 70%;
+    margin: 0px auto;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media (min-width: 768px) {
+
+  .todos-list {
+    width: 60%;
   }
+
+  .add-btn {
+    width: 50%;
+    margin: 0px auto;
+    margin-top: 10px;
+  }
+
 }
