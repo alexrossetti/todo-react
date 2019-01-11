@@ -114,6 +114,10 @@ input:focus {
     width: 60%;
   }
 
+  form {
+    width: 50%;
+  }
+
   .add-btn {
     width: 50%;
     margin: 0px auto;
