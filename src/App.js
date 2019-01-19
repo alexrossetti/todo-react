@@ -24,15 +24,23 @@ class App extends Component {
 
   renderTodos() {
     const { todos } = this.props;
+    
+    function orderByDate(arr, prop) {
+      return arr.slice().sort(function (a, b) {
+        return a[prop] < b[prop] ? -1 : 1;
+      });
+    }
+    const todoSorted = orderByDate(todos, 'deadline');
+    
 
     return (
       <ul className="todos-list">
         { 
-          todos.map(todo => {
+          todoSorted.map(todo => {
             return (
               <li key={todo.id}>
                 <div className="todos-list-text">{todo.text}</div>
-                <div> { moment(new Date(todo.deadline)).fromNow()} </div>
+                <div> { isNaN(new Date(todo.deadline)) ? '' : moment(new Date(todo.deadline)).fromNow()} </div>
                 <div className="delete-btn" onClick={(e) => this.deleteTodo(todo.id)}>&#x2715;</div>
               </li>
             )

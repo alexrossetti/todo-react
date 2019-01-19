@@ -6,7 +6,6 @@ export const addTodo = (text, deadline) => {
         text,
         deadline
     }
-    console.log('addTodo action ', action);
     return action;
 }
 
